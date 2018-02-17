@@ -40,7 +40,8 @@ npm install
 
 To get this repo hosting I've included a npm script to spin up a server with this command;
 ```
-npm run develop
+npm run start #stands up a local server
+npm run build #builds self contained build folder
 ```
 
 ## Development
