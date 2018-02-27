@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 
 import Ingredient from './Ingredient.js';
 
-const Recipe = ({recipe}) => {
-
+const Recipe = ({recipe, onRecipeSelect}) => {
   const ingredients = recipe.ingredients.map((ingredient) => {
-    return <Ingredient ingredient={ingredient} /> 
+    return <Ingredient key={ingredient} ingredient={ingredient} /> 
   });
   return (
-    <tr>
+    <tr onClick={() => onRecipeSelect(recipe.name)}>
       <th scope="row">{recipe.name}</th>
       <td>
         <div>{recipe.summary}</div>
